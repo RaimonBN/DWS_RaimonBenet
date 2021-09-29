@@ -33,7 +33,22 @@ if ($pos !== true) {
 }else{
     echo ("La cadena ".prefijo." no fue encontrada en la cadena ".$nombre);
 }
+echo("<br>"."<br>");
+$cuantasA = substr_count(strtolower($nombre),'a');
 
+echo ("En la frase : ".$nombre. " hay un total de ". $cuantasA ." a") ;
+
+echo("<br>"."<br>");
+
+$primeraA = stripos(strtolower($nombre),'a');
+
+if($primeraA == null){
+    echo("NO hay ninguna a en la frase ".$nombre);
+}else{
+echo ("En la frase : ".$nombre. " la primera a que aparece esta en la posición : ". $primeraA);
+}
+
+echo("<br>"."<br>");
 
 ?>
 </body>
