@@ -50,6 +50,28 @@ echo ("En la frase : ".$nombre. " la primera a que aparece esta en la posición 
 
 echo("<br>"."<br>");
 
+$num0 = str_ireplace('o','0',strtolower($nombre));
+echo("En la frase : ".$num0. " se han sustituido las 'o' por '0' ");
+
+echo("<br>"."<br>");
+
+$url = 'http://username:password@hostname:9090/path?arg=value';
+
+$pathprotocol = parse_url($url, PHP_URL_SCHEME);
+$pathuser = parse_url($url, PHP_URL_USER);
+$pathurl = parse_url($url, PHP_URL_PATH );
+$pathquerystring = parse_url($url, PHP_URL_QUERY);
+
+echo("Este es el link : ".$url);
+echo("<br>");
+echo("Protocolo del link : " .$pathprotocol);
+echo("<br>");
+echo("Usuario del link : " .$pathuser);
+echo("<br>");
+echo("URL del link : ".$pathurl);
+echo("<br>");
+echo("Querystring del link : ".$pathquerystring);
+
 ?>
 </body>
 </html>
