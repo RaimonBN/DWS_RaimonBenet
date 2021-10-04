@@ -37,6 +37,9 @@ $nombresBuscar = array_search('Raimon', $nombres);
 echo("La posición de mi nombre en el array es : ".$nombresBuscar);
 echo("<br>");
 
+//A partir de aquí empiezo a usar los echo sin paréntesis por que ya me he acostrumbrado a no usarlos ya que no hacen falta.
+
+
 $alumnos = array(
     array(
         'id' => 0,
@@ -60,7 +63,25 @@ $alumnos = array(
     )
     );
 
+    echo "<br>";
+    echo "<table border = 1 >";
 
+    foreach($alumnos as $alumno => $info){
+        echo "<tr>";
+        foreach($info as $inf){
+            echo("<td>".$inf ."<td>");
+        }
+         echo "<tr>";
+    }
+    echo "</table>";
+    echo "<br>";
+
+    $arrayNombres = array_column($alumnos, 'nombre');
+    print_r($nombres);
+
+    echo "<br>";
+    $Array10 = ['1','2','3','4','5','6','7','8','9','10'];
+    echo "Suma total : ". array_sum($Array10);
 ?>
 </body>
 </html>
